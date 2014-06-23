@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>sessionReplication by hazelcastInternsSummer14</title>
+    <title>HTTP Session Replication by hazelcastInternsSummer14</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">sessionReplication</h1>
+        <h1 class="header">HTTP Session Replication</h1>
         <p class="header">Sample Web Session Replication App through Hazelcast</p>
 
         <ul>
@@ -44,33 +44,35 @@
 
 <p>Extract .zip file. Drop hazelcast-3.3-EA2-ee.jar and hazelcast-sessions-tomcat7-3.3-EA2.jar to your tomcat-installation-path/lib. They are under /lib of extracted folder.<br></p>
 
-<p>Next, you must put hazelcast.xml file to tomcat-installation-directory/lib . You can find a sample hazelcast.xml file under extracted-hazelcast-folder/bin .</p>
+<p>Next, you must put hazelcast.xml file to tomcat-installation-directory/lib . You can find a sample hazelcast.xml file under extracted-hazelcast-folder/bin. Additionally, in hazelcast.xml, put your license key between "license-key" and "/license-key" tags. </p>
 
 <p>Finally, open tomcat7-installation-folder/conf/context.xml file and add this line</p>
 
 <p><code>&lt;Manager className="com.hazelcast.session.HazelcastSessionManager" sticky="true"/&gt;</code></p>
 
-<p>in  and  tags.
-<br><br></p>
+<p>in "Context" and "/Context" tags.
+<br></p>
 
 <h2>
 <a name="how-to-run-sample-application" class="anchor" href="#how-to-run-sample-application"><span class="octicon octicon-link"></span></a>How to Run Sample Application</h2>
 
+<p>BEFORE-STARTING : Make sure tomcat-installation-path/startup.sh and tomcat-installation-path/shutdown.sh are executable. You can make them executable via <code>chmod +x startup.sh</code> and <code>chmod +x shutdown.sh</code> if your working directory is tomcat-installation-path. </p>
+
 <p>1) go to tomcat-installation-path/bin and run startup.sh shell file from terminal.</p>
 
-<p>2) clone the repository via git clone <code>https://github.com/hazelcastInternsSummer14/sessionReplicationApp.git</code></p>
+<p>2) clone the repository via <code>git clone https://github.com/hazelcastInternsSummer14/sessionReplicationApp.git</code></p>
 
 <p>3) then go to sessionReplicationApp/firsthot folder.</p>
 
-<p>4) run maven via sudo <code>mvn tomcat:deploy</code>`</p>
+<p>4) run maven via sudo <code>mvn tomcat:deploy</code></p>
 
 <p>5) maven creates firstshot.war file under sessionReplicationApp/firsthot/target folder.</p>
 
 <p>6) copy firstshot.war file to tomcat7-installation-path/webapps folder</p>
 
-<p>7) open a browser and enter localhost:8080/firstshot</p>
+<p>7) open a browser and enter <code>localhost:8080/firstshot</code></p>
 
-<p>8) username: hazelcast and password: admin</p>
+<p>8) username: <code>hazelcast</code> and password: <code>admin</code></p>
       </section>
       <footer>
         <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
