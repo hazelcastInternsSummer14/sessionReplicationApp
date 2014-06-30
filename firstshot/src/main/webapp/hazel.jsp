@@ -13,19 +13,21 @@
 </head>
 <body>
 <div align="center">
+    <%
+        session=request.getSession();
+        out.println( "The SESSION TIMEOUT period is " + session.getMaxInactiveInterval() + " seconds.<br><br>");%>
+
     <%@ page import="java.util.*" %>
     <%
+        out.println( "Now changing it to 2 minutes.<br><br>");
+        session.setMaxInactiveInterval(2 * 60);
+        out.println("The SESSION TIMEOUT period is now " + session.getMaxInactiveInterval()  + " seconds.</br>");
 
-        if(session.isNew()){ out.println("session is created first time=<br>" + session.getId()+ "\n"); }
+        if(session.isNew()){ out.println("session is created first time=</br>" + session.getId()+ "\n"); }
         else { out.println("this session is not new:<br>" + session.getId()+"</br>"); }
         out.println("creation time:"  + new Date(session.getCreationTime()) + "</br>");
 
         out.println("last accessed time:"  + new Date(session.getLastAccessedTime()) + "</br>");
-
-        out.println( "The SESSION TIMEOUT period is " + session.getMaxInactiveInterval() + " seconds.<br><br>");
-        out.println( "Now changing it to 2 minutes.<br><br>");
-        session.setMaxInactiveInterval(2 * 60);
-        out.println("The SESSION TIMEOUT period is now " + session.getMaxInactiveInterval()  + " seconds.");
 
     %>
 
@@ -65,9 +67,10 @@
             a.append(name +" " + session.getAttribute(name) + " "+"<br>");
         }
         String res=a.toString();
-            out.println(res);
+        out.println(res);
 
     %>
+
     </p>
 </div>
 

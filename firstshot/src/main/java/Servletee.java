@@ -47,6 +47,7 @@ if(request.getParameter("action")!=null) {
             a.append(name +" " + session.getAttribute(name) + " "+"<br>");
         }
         String res=a.toString();
+
         request.setAttribute("res",res);
        request.getRequestDispatcher("/hazel.jsp").forward(request, response);
 
