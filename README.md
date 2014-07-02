@@ -37,3 +37,4 @@ BEFORE-STARTING : Make sure tomcat-installation-path/startup.sh and tomcat-insta
 
 7) open a browser and enter `localhost:8080/firstshot/hazelcast`
 
+Built with love in Istanbul.
