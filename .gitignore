@@ -1,4 +1,4 @@
-firstshot/.idea
+*/.idea
 *.iml
 target
 *.pyc

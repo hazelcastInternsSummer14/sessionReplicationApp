@@ -1,11 +1,11 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="example:war exploded">
-    <output-path>$PROJECT_DIR$/target/firstshot</output-path>
+    <output-path>$PROJECT_DIR$/target/example</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="firstshot/web/Web" />
+      <element id="javaee-facet-resources" facet="example/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="firstshot" />
+          <element id="module-output" name="example" />
         </element>
       </element>
     </root>
