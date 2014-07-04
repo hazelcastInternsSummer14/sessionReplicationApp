@@ -47,5 +47,5 @@ BEFORE-STARTING : Make sure tomcat-installation-path/startup.sh and tomcat-insta
 Built with love in Istanbul.
 
 <h2>NOTES</h2>
-- You can use Apache Tomcat 6 instead of Tomcat 7.
-- 
+ -You can use Apache Tomcat 6 instead of Tomcat 7.
+  
