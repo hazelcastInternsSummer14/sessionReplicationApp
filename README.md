@@ -50,3 +50,5 @@ Built with love in Istanbul.
  -You can use Apache Tomcat 6 instead of Tomcat 7.<br />
  -If you want to use client only mode, there must be another hazelcast instance that is working in your network.<br />
  -You can find detailed explanations at: http://hazelcast.org/docs/latest/manual/html/sessionreplication.html<br />
+ -You can use Hazelcast session replication feature if you have many servers that have load-balancer in front of them. 
+ One server goes down, session will not lost.
