@@ -12,12 +12,12 @@ You should have installed Apache Tomcat7 and Apache Maven 3.2.1 on your system. 
 
 1) Extract .zip file. Drop hazelcast-3.3-XX-ee.jar and hazelcast-sessions-tomcat7-3.3-XX.jar to your tomcat-installation-path/lib. They are under /lib of extracted folder of Hazelcast.<br />
 
-2) You must put hazelcast.xml file to tomcat-installation-directory/lib . You can find a sample hazelcast.xml file under extracted-hazelcast-folder/bin. Additionally, in hazelcast.xml, put your license key between "<license-key>" and "</license-key>" tags. 
+2) You must put hazelcast.xml file to tomcat-installation-directory/lib . You can find a sample hazelcast.xml file under extracted-hazelcast-folder/bin. Additionally, in hazelcast.xml, put your license key between `<license-key>` and `</license-key>` tags. 
 
 3) Open tomcat7-installation-folder/conf/context.xml file and add this line
 
 `<Manager className="com.hazelcast.session.HazelcastSessionManager" sticky="true" clientOnly="false" />`
-between "<Context>" and "</Context>" tags.
+between `<Context>` and `</Context>` tags.
 
 4) Open tomcat7-installation-folder/conf/server.xml file and add a listener
 
