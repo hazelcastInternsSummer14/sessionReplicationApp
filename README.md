@@ -47,6 +47,6 @@ BEFORE-STARTING : Make sure tomcat-installation-path/startup.sh and tomcat-insta
 Built with love in Istanbul.
 
 <h2>NOTES</h2>
- -You can use Apache Tomcat 6 instead of Tomcat 7.
- -If you want to use client only mode, there must be another hazelcast instance that is working in your network.</br>
- -You can find detailed explanations at: http://hazelcast.org/docs/latest/manual/html/sessionreplication.html
+ -You can use Apache Tomcat 6 instead of Tomcat 7.<br />
+ -If you want to use client only mode, there must be another hazelcast instance that is working in your network.<br />
+ -You can find detailed explanations at: http://hazelcast.org/docs/latest/manual/html/sessionreplication.html<br />
