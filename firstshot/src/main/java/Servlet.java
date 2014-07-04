@@ -9,8 +9,10 @@ import java.util.Enumeration;
 /**
  * Created by bilal on 17/06/14.
  */
-public class Servletee extends HttpServlet {
-    //   int syc=1;
+public class Servlet extends HttpServlet {
+
+
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -19,7 +21,6 @@ public class Servletee extends HttpServlet {
         HttpSession session = request.getSession();
 
         if(request.getParameter("key")!=null && request.getParameter("value")!=null){
-        //    session.setAttribute("key",request.getParameter("value"));
         }
 if(request.getParameter("action")!=null) {
     if (request.getParameter("action").equals("set") && request.getParameter("key") != null && request.getParameter("value") != "null") {
@@ -35,6 +36,7 @@ if(request.getParameter("action")!=null) {
         session.removeAttribute(request.getParameter("key"));
     }
 }
+
         Enumeration names=session.getAttributeNames();
         StringBuilder a = new StringBuilder();
 
@@ -42,7 +44,6 @@ if(request.getParameter("action")!=null) {
 
             String name = (String) names.nextElement();
             a.append("<br>");
-//            if(!(name.equals("key")) && !(name.equals("todo")))
 
             a.append(name +" " + session.getAttribute(name) + " "+"<br>");
         }

@@ -60,9 +60,9 @@
         while (names.hasMoreElements()) {
 
             String name = (String) names.nextElement();
-            out.println(name);
+        //    out.println(name);
             a.append("<br>");
-//            if(!(name.equals("key")) && !(name.equals("todo")))
+            if(!(name.equals("key")) && !(name.equals("res")))
 
             a.append(name +" " + session.getAttribute(name) + " "+"<br>");
         }
