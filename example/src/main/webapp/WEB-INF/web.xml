@@ -5,11 +5,11 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
     <servlet>
-        <servlet-name>Servletee</servlet-name>
-        <servlet-class>Servlet</servlet-class>
+        <servlet-name>sessionReplication</servlet-name>
+        <servlet-class>com.hazelcast.HazelcastSessionReplication.HazelcastSessionReplication</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Servletee</servlet-name>
+        <servlet-name>sessionReplication</servlet-name>
         <url-pattern>/hazelcast</url-pattern>
     </servlet-mapping>
 
