@@ -34,17 +34,21 @@ BEFORE-STARTING : Make sure tomcat-installation-path/startup.sh and tomcat-insta
 
 2) clone the repository via `git clone https://github.com/hazelcastInternsSummer14/sessionReplicationApp.git`
 
-3) then go to sessionReplicationApp/firsthot folder.
+3) then go to sessionReplicationApp/example folder.
 
-4) run maven via sudo `mvn tomcat:deploy`
+4) run maven via `mvn package`
 
-5) maven creates firstshot.war file under sessionReplicationApp/firsthot/target folder.
+5) maven creates example.war file under sessionReplicationApp/example/target folder.
 
-6) copy firstshot.war file to tomcat7-installation-path/webapps folder
+6) copy example.war file to tomcat7-installation-path/webapps folder
 
-7) open a browser and enter `localhost:8080/firstshot/hazelcast`
+7) open a browser and enter `localhost:8080/example/hazelcast`
 
 Built with love in Istanbul.
 
 <h2>NOTES</h2>
-- You can use Apache Tomcat 6 instead of Tomcat 7.
+ -You can use Apache Tomcat 6 instead of Tomcat 7.<br />
+ -If you want to use client only mode, there must be another hazelcast instance that is working in your network.<br />
+ -You can find detailed explanations at: http://hazelcast.org/docs/latest/manual/html/sessionreplication.html<br />
+ -You can use Hazelcast session replication feature if you have many servers that have load-balancer in front of them. 
+ One server goes down, session will not lost.
