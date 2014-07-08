@@ -11,9 +11,9 @@ You should have installed Apache Tomcat7 and Apache Maven 3.2.1 on your system. 
 <h2>Tomcat Configuration</h2>
 
 1) Unzip `hazelcast-EE-<version>.zip` file into the folder `$HAZELCAST_ENTERPRISE_ROOT`. 
-Under the `$HAZELCAST_ENTERPRISE_ROOT$/lib` folder, copy `hazelcast-<VERSION>-ee.jar` and `hazelcast-sessions-tomcat7-<VERSION>.jar` to your `$CATALINA_HOME$/lib` folder.<br />
+Under the `$HAZELCAST_ENTERPRISE_ROOT$/lib` folder, Put `hazelcast-<VERSION>-ee.jar` and `hazelcast-sessions-tomcat7-<VERSION>.jar` to your `$CATALINA_HOME$/lib` folder.<br />
 
-2) You must put `hazelcast.xml` file to `$CATALINA_HOME$/lib`. You can find a sample `hazelcast.xml` file under `$HAZELCAST_ENTERPRISE_ROOT/bin`. Additionally, in `hazelcast.xml`, put your license key between `<license-key>` and `</license-key>` tags. 
+2) Put `hazelcast.xml` file to `$CATALINA_HOME$/lib`. 
 
 3) Open `$HAZELCAST_ENTERPRISE_ROOT/conf/context.xml` file and add this line
 
@@ -47,6 +47,16 @@ between `<Context>` and `</Context>` tags.
 <h2>NOTES</h2>
  -You can use Apache Tomcat 6 instead of Tomcat 7.<br />
  -If you want to use client only mode, there must be another hazelcast instance that is working in your network.<br />
+ Also you have to update manager tag in `$CATALINA_HOME$/conf/context.xml` file. An example is shown below:
+  
+   ```xml
+ <Context>
+      <Manager className="com.hazelcast.session.HazelcastSessionManager"
+       clientOnly="true"/>
+ </Context>
+ ```
+ 
  -You can find detailed explanations at: http://hazelcast.org/docs/latest/manual/html/sessionreplication.html<br />
  -You can use Hazelcast session replication feature if you have many servers that have load-balancer in front of them. 
  One server goes down, session will not lost.
+
